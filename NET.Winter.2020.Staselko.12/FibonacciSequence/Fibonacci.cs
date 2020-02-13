@@ -4,8 +4,17 @@ using System.Numerics;
 
 namespace FibonacciSequence
 {
+    /// <summary>
+    /// Class Fibonacci.
+    /// </summary>
     public static class Fibonacci
     {
+        /// <summary>
+        /// Fibonacci number sequence generator method
+        /// that allows you to get the first count-numbers of the Fibonacci sequence.
+        /// </summary>
+        /// <param name="count">Input count.</param>
+        /// <returns>First count numbers of the Fibonacci sequence.</returns>
         public static IEnumerable<BigInteger> FibonacciGenerator(int count)
         {
             if (count <= 0)
