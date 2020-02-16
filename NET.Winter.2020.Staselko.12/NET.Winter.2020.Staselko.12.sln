@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciSequence", "Fibona
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FibonacciSequence.Tests", "FibonacciSequence.Tests\FibonacciSequence.Tests.csproj", "{9B142B4B-B549-4AD7-A1F9-02E04AF5CBE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "Collections\Collections.csproj", "{E437A4F5-C5FF-444E-AB92-B6025408908B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{E437A4F5-C5FF-444E-AB92-B6025408908B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections.Tests", "Collections.Tests\Collections.Tests.csproj", "{3124E6D1-51E7-4E00-849F-168913BEEEB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections.Tests", "Collections.Tests\Collections.Tests.csproj", "{3124E6D1-51E7-4E00-849F-168913BEEEB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumbers", "PrimeNumbers\PrimeNumbers.csproj", "{52B002F3-11B4-4B60-946D-3606D2403263}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeNumbers.Tests", "PrimeNumbers.Tests\PrimeNumbers.Tests.csproj", "{5D18720C-FF9D-4355-AFDE-D0786DB529D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{3124E6D1-51E7-4E00-849F-168913BEEEB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3124E6D1-51E7-4E00-849F-168913BEEEB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3124E6D1-51E7-4E00-849F-168913BEEEB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B002F3-11B4-4B60-946D-3606D2403263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B002F3-11B4-4B60-946D-3606D2403263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B002F3-11B4-4B60-946D-3606D2403263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B002F3-11B4-4B60-946D-3606D2403263}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D18720C-FF9D-4355-AFDE-D0786DB529D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D18720C-FF9D-4355-AFDE-D0786DB529D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D18720C-FF9D-4355-AFDE-D0786DB529D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D18720C-FF9D-4355-AFDE-D0786DB529D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
