@@ -21,17 +21,14 @@ namespace EnumerableSequences
                 throw new ArgumentNullException($"{nameof(predicate)} cannot be null.");
             }
 
-            var filteredSource = new List<TSource>();
-
             foreach (var item in source)
             {
                 if (predicate.IsMatch(item))
                 {
-                    filteredSource.Add(item);
+                    yield return item;
                 }
             }
-
-            return filteredSource.ToArray();
+    
         }
 
         /// <summary>
@@ -51,21 +48,11 @@ namespace EnumerableSequences
                 throw new ArgumentNullException($"{nameof(transformer)} cannot be null.");
             }
 
-            int index = 0;
-            int length = 0;
             foreach (var item in source)
             {
-                length++;
+                yield return transformer.Transform(item);
+                
             }
-
-            var transformedSource = new TResult[length];
-
-            foreach (var item in source)
-            {
-                transformedSource[index++] = transformer.Transform(item);
-            }
-
-            return transformedSource;
         }
 
         /// <summary>
@@ -90,7 +77,6 @@ namespace EnumerableSequences
                 length++;
             }
 
-
             int index = 0;
             var sorceToSort = new TSource[length];
             foreach (var item in source)
@@ -113,20 +99,17 @@ namespace EnumerableSequences
         /// <typeparam name="TResult">Output parameter.</typeparam>
         /// <param name="source">The source.</param>
         /// <returns>The array of objects of a certain type.</returns>
-        public static TResult[] TypeOf<TResult>(this object[] source)
+        public static IEnumerable<TResult> TypeOf<TResult>(this object[] source)
         {
             IsValidationSource(source);
 
-            var result = new List<TResult>();
             foreach (var item in source)
             {
                 if (item is TResult)
                 {
-                    result.Add((TResult)item);
+                    yield return (TResult)item;
                 }
             }
-
-            return result.ToArray();
         }
 
         /// <summary>
@@ -135,7 +118,7 @@ namespace EnumerableSequences
         /// <typeparam name="TSource">Input parameter.</typeparam>
         /// <param name="source">The source.</param>
         /// <returns>Reverse array.</returns>
-        public static TSource[] Reverse<TSource>(this TSource[] source)
+        public static IEnumerable<TSource> Reverse<TSource>(this TSource[] source)
         {
             IsValidationSource(source);
             var result = new TSource[source.Length];
